@@ -9,6 +9,9 @@ body {
   background-color: #0B0F1A;
   color: #f1f1f1;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 /* NAVBAR */
 .navbar {
@@ -22,6 +25,35 @@ body {
   align-items: center;
   border-bottom: 1px solid #1f1f1f;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px; /* reduz o padding para caber na tela */
+  }
+
+  .menu-items {
+    display: none; /* mantém oculto no celular */
+  }
+}
+
+@media (max-width: 600px) {
+  .area-superior {
+    padding: 100px 20px;
+    flex-direction: column; /* imagem embaixo ou cima do texto */
+    gap: 40px;
+    height: auto; /* ajusta a altura */
+  }
+
+  .foto-container {
+    width: 300px;   /* maior que antes */
+    height: 400px;  /* maior que antes */
+  }
+
+  .foto-bg {
+    width: 130%;    /* animação mais larga */
+    height: 130%;   /* animação mais alta */
+  }
 }
 
 .menu-items {
@@ -203,7 +235,7 @@ background: linear-gradient(135deg, #38BDF8, #8B5CF6);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 380px; /* garante mesma altura */
+  min-height: 380px; 
   text-align: center;
 }
 
